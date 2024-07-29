@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract TokenSwap is Ownable {
+contract LandshareSwap is Ownable {
     IERC20 public gnUSD;
     IERC20 public LAND;
     uint256 public swapAmount; // fixed amount of gnUSD to swap

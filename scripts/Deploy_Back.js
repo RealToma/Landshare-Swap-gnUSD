@@ -14,8 +14,13 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const nftCollection = await hre.ethers.getContractFactory("Djen");
-  const greeter = await nftCollection.deploy();
+  const addressgnUSD = "0x5c1409a46cD113b3A667Db6dF0a8D7bE37ed3BB3";
+  const addressLandshare = "0x45934E0253955dE498320D67c0346793be44BEC0";
+
+  const contractLandshareSwap = await hre.ethers.getContractFactory(
+    "LandshareSwap"
+  );
+  const greeter = await contractLandshareSwap.deploy(addressgnUSD, addressLandshare);
 
   await greeter.deployed();
 
