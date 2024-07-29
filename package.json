@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.6",
+    "@openzeppelin/hardhat-upgrades": "^1.28.0",
+    "dotenv": "^16.0.1",
+    "erc721a": "^4.2.3",
+    "hardhat": "^2.9.0",
+    "remove": "^0.1.5"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.4"
+  }
+}
