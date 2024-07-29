@@ -20,7 +20,10 @@ async function main() {
   const contractLandshareSwap = await hre.ethers.getContractFactory(
     "LandshareSwap"
   );
-  const greeter = await contractLandshareSwap.deploy(addressgnUSD, addressLandshare);
+  const greeter = await contractLandshareSwap.deploy(
+    addressgnUSD,
+    addressLandshare
+  );
 
   await greeter.deployed();
 

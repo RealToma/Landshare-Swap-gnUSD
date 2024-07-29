@@ -74,9 +74,20 @@ module.exports = {
       },
     ],
   },
-  defaultNetwork: "bsc",
+  defaultNetwork: "plume-testnet",
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
+    // apiKey: { "plume-testnet": "test" },
+    customChains: [
+      {
+        network: "plume-testnet",
+        chainId: 161221135,
+        urls: {
+          apiURL: "https://testnet-explorer.plumenetwork.xyz/api?",
+          browserURL: "https://testnet-explorer.plumenetwork.xyz",
+        },
+      },
+    ],
   },
   networks: {
     localhost: {
@@ -84,6 +95,11 @@ module.exports = {
       gas: 2100000,
       gasPrice: 20000000000,
       accounts: [process.env.PRIVATEKEY],
+    },
+    "plume-testnet": {
+      url: "https://testnet-rpc.plumenetwork.xyz/http",
+      chainId: 161221135,
+      accounts: [`0x${process.env.PRIVATEKEY}`],
     },
     goerli: {
       // url: "https://goerli.infura.io/v3/f0d697f8f338430d84ebc46b03e96ca0",
